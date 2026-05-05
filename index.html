@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snake Game</title>
+
+  <style>
+    body {
+      background:black;
+      text-align:center;
+      color:white;
+      font-family:Arial;
+      margin:0;
+    }
+
+    canvas {
+      background:#111;
+      display:block;
+      margin:20px auto;
+      box-sizing: content-box;
+    }
+  </style>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+</head>
+
+<body>
+
+<h2>🐍 Snake Game</h2>
+
+<canvas id="game" width="600" height="600"></canvas>
+
+<script src="game.js"></script>
+<script>
+ 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log("SW registered"))
+    .catch(err => console.log("SW error", err));
+}
+</script>
+
+</body>
+</html>
